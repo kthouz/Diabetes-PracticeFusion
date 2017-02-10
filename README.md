@@ -33,7 +33,4 @@ The process consists in:
 
 ### 5. Summary and recommendations
 
-Three models were built by tuning the Gradient Boost ML algorithm using clean data from patients information, transcripts, diagnosis and medications. An ensemble model was tuned through a grid search of optimum parameters (number of trees, max depth, ...) and 5 fold cross-validation using using data from patients info, transcripts and diagnosis to produce ROC-AUC 
-of 0.7537. A tremandous improvement was achieved by using tf-idf data obtained from medications name. This new model produced  ROC-AUC 0.9939.
-
-Clearly, medication names are very important to predict potential diabetes patients if historical medical records of patients are available. Althought an accuracy of 0.9939 is very good, I would recommend using tf-idf on n-grams instead of single terms. This would give better intuitive understanding about the population. The model built using n-gram would also be robust for future medications which are not necessary present in the current dataset
+Three models were built by tuning the Gradient Boost ML algorithm using clean data from patients information, transcripts, diagnosis and medications and they were independently cross-validated. AUC of these models were 0.707 (using numerical variables), 0.680 (using categorical variables) and 0.736 (using text-mined variables). For improvement, a mixture model was then built as a linear combination of the three models. The weight were optimized through a modifies Gradient Descent Algorithm its AUC turned to be 0.822.
