@@ -31,6 +31,6 @@ The process consists in:
 [(continue reading ...)](https://github.com/kthouz/Diabetes-PracticeFusion/blob/master/3_EDA%20%26%20Model%20Building.ipynb)
 
 
-### 5. Summary and recommendations
+### 3. Summary and recommendations
 
-Three models were built by tuning the Gradient Boost ML algorithm using clean data from patients information, transcripts, diagnosis and medications and they were independently cross-validated. AUC of these models were 0.707 (using numerical variables), 0.680 (using categorical variables) and 0.736 (using text-mined variables). For improvement, a mixture model was then built as a linear combination of the three models. The weight were optimized through a modifies Gradient Descent Algorithm its AUC turned to be 0.822.
+Three models were built by tuning the Gradient Boost ML algorithm using clean data from patients information, transcripts, diagnosis and medications and they were independently cross-validated. AUC of these models were 0.707 (using numerical variables), 0.680 (using categorical variables) and 0.736 (using text-mined variables). For improvement, a mixture model was then built as a linear combination of the three models. The weight were optimized through a modifies Gradient Descent Algorithm its AUC turned to be 0.852.
